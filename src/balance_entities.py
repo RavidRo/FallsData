@@ -1,7 +1,7 @@
 import copy
+import random
 
-
-def balance_entities(entities_imported, target):
+def balance_entities(entities_imported, target, balance):
     ids_list = entities_imported["id"].to_list()
     columns = entities_imported.columns.drop(["id"]).to_list()
 
@@ -35,16 +35,19 @@ def balance_entities(entities_imported, target):
         if entity is None:
             return -100 * len(columns)
 
-        score = 0
-        for column in columns:
-            index = entity[column]
-            target = bins_target[column][index]
-            current_count = bins_count[column][index]
-            # The precentage needed to get to our goal
-            # The score is in precentage because we want to treat equally all columns
-            score += (target - current_count) / target
-
-        return score
+        if balance:
+            score = 0
+            for column in columns:
+                index = entity[column]
+                target = bins_target[column][index]
+                current_count = bins_count[column][index]
+                # The precentage needed to get to our goal
+                # The score is in precentage because we want to treat equally all columns
+                score += (target - current_count) / target
+            
+            return score
+        else:
+            return random.uniform(-1, 1)
 
     # returns the best candidate and its index, by the score function
     def get_best_candidate(candidates, bins_count):

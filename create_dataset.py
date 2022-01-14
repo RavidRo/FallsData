@@ -16,6 +16,7 @@ falls = {
     ],
 }
 group_falls = True
+balance = False
 selected_falls = [80, 81]
 target_entities = 200
 dataset_directory = "Falls"
@@ -45,7 +46,7 @@ if __name__ == "__main__":
     print("Created vmap")
     new_entities = create_entities(raw_data, entities, selected_falls)
     print("Created entities")
-    balanced_entities = balance_entities(new_entities, target_entities)
+    balanced_entities = balance_entities(new_entities, target_entities, balance)
 
     new_raw_data = create_raw_data(
         balanced_entities, raw_data, selected_falls, falls["ids"], group_falls
