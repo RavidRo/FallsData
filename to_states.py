@@ -3,10 +3,13 @@ import pandas as pd
 falls_properties_ids = [78]
 unused_falls_properties_ids = [78, 79, 82]
 
-entities_imported = pd.read_csv("Falls/entities.csv")
-raw_data_imported = pd.read_csv("Falls/raw_data.csv")
-vmap_imported = pd.read_csv("Falls/vmap.csv")
-states_imported = pd.read_csv("data/states.csv")
+output_directory = "Falls"
+input_directory = "data"
+
+entities_imported = pd.read_csv(output_directory + "/entities.csv")
+raw_data_imported = pd.read_csv(output_directory + "/raw_data.csv")
+vmap_imported = pd.read_csv(output_directory + "/vmap.csv")
+states_imported = pd.read_csv(input_directory + "/states.csv")
 
 entities_ids = entities_imported["id"].to_list()
 falls = raw_data_imported[raw_data_imported["TemporalPropertyID"].isin(falls_properties_ids)]
@@ -53,7 +56,7 @@ def bins(row):
 
 
 new_states["BinLabel"] = new_states.apply(bins, axis=1)
-new_states.to_csv(index=False, path_or_buf="Falls/states.csv")
+new_states.to_csv(index=False, path_or_buf= output_directory + "/states.csv")
 
 
 # Creating the falls intervals
@@ -67,8 +70,8 @@ for i in range(len(falls)):
     interval = (start_time, start_time + 1, symbol_id, property_id)
     intervals[entity_id].append(interval)
 
-    KL_imported = open("data/KL.txt", "r")
-KL_new = open("Falls/KL.txt", "w")
+KL_imported = open(input_directory + "/KL.txt", "r")
+KL_new = open(output_directory + "/KL.txt", "w")
 
 KL_strings = KL_imported.readlines()
 KL_new.writelines(KL_strings[:2])
