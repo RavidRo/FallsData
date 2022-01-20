@@ -1,0 +1,56 @@
+Files:
+	- gradient_3.csv: Specifies the bins for a gradient abstraction with 3 equal bins
+	- fall_properties.xlsx: Specifies the properties names and additional details about them
+	- entitiy_info_mapping.csv: Specifies the demographic details about each entity
+	- FallPrediction_data.csv: The temporal raw data.
+
+Falls:
+	- no injury: 78
+	- monitored injury: 79
+	- minor injury: 80
+	- major injury: 81
+	- no data: 82
+
+statistics:
+	- number of entities: 8558
+	- number of properties: 32
+	- unnamed properties ids: [1]
+	- total number of falls: 43174
+
+	- number of falls:
+		- no injury: 19175
+		- monitored injury: 5781
+		- minor injury: 3852
+		- major injury: 724
+		- no data: 13642
+
+	- number of entities per fall:
+		- no injury: 6015
+		- monitored injury: 3225
+		- minor injury: 2430
+		- major injury: 614
+		- no data: 5213
+
+	- 2 Classes:
+		- number of entities in entities: 81507
+		- number of original entities in entities: 6579
+		- number of entities in raw data: 7588
+		- number of entities in both 'original entities' and 'raw data entities': 2102
+		--- # What does it mean ?
+
+		- number of properties: 81
+
+		- window size: 35 days
+
+		- number of windows (entity id in entities)??: 81507
+		- number of windows (Unnamed 0.1)???: 623379
+
+		- size of each class: 
+			- no fall:	6000
+			- fall:	1588
+
+Questions:
+	- What is the unnamed columns in the entities and raw data files? they does not seem to correspond to each other.
+	- Why do I get weird results on the number of entities
+	- What is an entity? a windows? is there so little windows?
+	- How many windows are there per entity? many? of just 1?
