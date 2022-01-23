@@ -11,7 +11,10 @@ Falls:
 	- major injury: 81
 	- no data: 82
 
-statistics:
+- No. of known properties: 77
+- No. of known named properties: 31
+
+1 Class:
 	- number of entities: 8558
 	- number of properties: 32
 	- unnamed properties ids: [1]
@@ -31,23 +34,42 @@ statistics:
 		- major injury: 614
 		- no data: 5213
 
-	- 2 Classes:
-		- number of entities in entities: 81507
-		- number of original entities in entities: 6579
+- 2 Classes:
+	- entities_raw_data:
+		- columns: 
+			- OriginalEntityID
+			- Owner_Score
+			- Gender
+			- Age
+			- Height
+			- EntityID
+		- number of entities: 81507
+		- number of original entities: 6579
+
+	- sampleDF: # raw data file
+		- columns: 
+			- EntityID
+			- TemporalPropertyID
+			- TimeStamp
+			- TemporalPropertyValue
+		- number of entities in raw data: 7588
+		- size of each class: 
+			- no fall:	6000
+			- fall:	1588
+		- number of properties: 87
+		- number of named properties: 29
+		- all entities have a row in 'entities_raw_data'
+
+	- original_data: # Alisa said to not use this file
 		- number of entities in raw data: 7588
 		- number of entities in both 'original entities' and 'raw data entities': 2102
-		--- # What does it mean ?
-
 		- number of properties: 81
-
-		- window size: 35 days
-
-		- number of windows (entity id in entities)??: 81507
-		- number of windows (Unnamed 0.1)???: 623379
 
 		- size of each class: 
 			- no fall:	6000
 			- fall:	1588
+
+	- window size: 35 days
 
 Questions:
 	- What is the unnamed columns in the entities and raw data files? they does not seem to correspond to each other.
