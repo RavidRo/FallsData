@@ -34,7 +34,23 @@ Falls:
 		- major injury: 614
 		- no data: 5213
 
-- 2 Classes:
+- 2 classes:
+	- raw data:
+		No. of properties: 76 #classification is not included
+		No. of windows: 101818
+		classes:
+			fall: 8496
+			no fall: 93322
+	- properties:
+		- known: 30
+		- unknown: 46
+	- entities:
+		No. of windows: 101818
+		No. of original entities: 11986
+		Mean windows per entity: ~8.5
+		Window Size: 35 days
+
+- 2 Classes - old version:
 	- entities_raw_data:
 		- columns: 
 			- OriginalEntityID
