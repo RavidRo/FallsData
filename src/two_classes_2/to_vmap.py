@@ -7,3 +7,10 @@ def create_vmap(properties):
     properties["Description"] = properties["Variable Name"]
 
     return properties
+
+
+def filter_vmap(properties, raw_data):
+    properties_ids = raw_data["TemporalPropertyID"].drop_duplicates().to_list()
+    properties = properties[properties["Variable ID"].isin(properties_ids)]
+
+    return properties

@@ -3,9 +3,9 @@ import pandas as pd
 
 from src.two_classes_2.to_entities import create_entities
 from src.two_classes_2.to_raw_data import create_raw_data
-from src.two_classes_2.to_vmap import create_vmap
+from src.two_classes_2.to_vmap import create_vmap, filter_vmap
 
-target_entities = 200
+target_entities = 10000
 dataset_directory = "Falls"
 two_classes_directory = "time_window_data"
 data_directory = "data"
@@ -13,7 +13,7 @@ data_directory = "data"
 
 def import_data():
     path = os.path.join(data_directory, two_classes_directory)
-    entities_imported = pd.read_csv(path + "/entities_info_windows.csv")
+    entities_imported = pd.read_csv(path + "/entitiy_info_windows.csv")
     raw_data_imported = pd.read_csv(path + "/hogo_data_windows.csv")
     properties = pd.read_csv(path + "/fall_properties.csv")
 
@@ -33,10 +33,13 @@ if __name__ == "__main__":
 
     vmap = create_vmap(properties)
     print("Created vmap")
-    new_raw_data = create_raw_data(raw_data, target_entities, vmap)
 
-    new_entities = create_entities(new_raw_data, entities)
+    new_entities = create_entities(entities, target_entities)
     print("Created entities")
+
+    new_raw_data = create_raw_data(raw_data, new_entities, vmap)
+
+    vmap = filter_vmap(vmap, new_raw_data)
 
     export_data(new_raw_data, vmap, new_entities)
     print("Exported successfully dataset")
