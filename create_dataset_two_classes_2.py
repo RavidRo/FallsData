@@ -6,6 +6,7 @@ from src.two_classes_2.to_raw_data import create_raw_data
 from src.two_classes_2.to_vmap import create_vmap, filter_vmap
 
 target_entities = 10000
+balance_classes = True
 dataset_directory = "Falls"
 two_classes_directory = "time_window_data"
 data_directory = "data"
@@ -34,7 +35,9 @@ if __name__ == "__main__":
     vmap = create_vmap(properties)
     print("Created vmap")
 
-    new_entities = create_entities(entities, target_entities)
+    classification_rows = raw_data[raw_data["TemporalPropertyID"] == -1]
+
+    new_entities = create_entities(entities, target_entities, balance_classes)
     print("Created entities")
 
     new_raw_data = create_raw_data(raw_data, new_entities, vmap)

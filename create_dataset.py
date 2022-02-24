@@ -18,7 +18,7 @@ falls = {
 group_falls = True
 balance = True
 selected_falls = [80, 81]
-target_entities = 200
+target_entities = 100
 dataset_directory = "Falls"
 data_directory = "data"
 

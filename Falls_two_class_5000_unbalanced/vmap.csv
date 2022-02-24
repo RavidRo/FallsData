@@ -1,0 +1,32 @@
+Variable ID,Variable Name,Description
+47,weight_measurement,weight_measurement
+48,blood_o2_measurement,blood_o2_measurement
+49,blood_sugar_measurement,blood_sugar_measurement
+50,pulse_measurement,pulse_measurement
+51,respiration_measurement,respiration_measurement
+52,temperature_measurement,temperature_measurement
+53,Hieght,Hieght
+54,medical_routin_regular_observed,medical_routin_regular_observed
+55,medical_routin_special_observed,medical_routin_special_observed
+56,medical_routin_regular_intervene,medical_routin_regular_intervene
+57,medical_routin_uncertain_intervene,medical_routin_uncertain_intervene
+58,medical_routin_special_intervene,medical_routin_special_intervene
+59,medical_uncertain_special,medical_uncertain_special
+60,medical_urgent_special_observed,medical_urgent_special_observed
+61,medical_urgent_special_intervene,medical_urgent_special_intervene
+62,Fluid,Fluid
+63,Food,Food
+64, Nutrition watch, Nutrition watch
+65,Fluid Watch,Fluid Watch
+66,Toilet,Toilet
+67,Emotions,Emotions
+68,Positive Communication,Positive Communication
+69,Entertainer,Entertainer
+70,Smooking,Smooking
+71,Exrcise,Exrcise
+72,Appetite,Appetite
+73,Fluid_Amount,Fluid_Amount
+75,Illness,Illness
+76,MobilityAssistance,MobilityAssistance
+77,Diet,Diet
+-1,fell,fell

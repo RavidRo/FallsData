@@ -3,7 +3,7 @@ import pandas as pd
 falls_properties_ids = [78]
 unused_falls_properties_ids = [78, 79, 82]
 
-output_directory = "Falls"
+output_directory = "Falls_one_class_100_balanced"
 input_directory = "data"
 
 entities_imported = pd.read_csv(output_directory + "/entities.csv")
@@ -56,7 +56,7 @@ def bins(row):
 
 
 new_states["BinLabel"] = new_states.apply(bins, axis=1)
-new_states.to_csv(index=False, path_or_buf= output_directory + "/states.csv")
+new_states.to_csv(index=False, path_or_buf=output_directory + "/states.csv")
 
 
 # Creating the falls intervals

@@ -1,0 +1,61 @@
+StateID,TemporalPropertyID,BinID,BinLow,BinHigh,BinLowScore,TemporalPropertyName,BinLabel
+1,47,0,-inf,59.4,,weight_measurement,Low
+2,47,1,59.4,inf,,weight_measurement,High
+3,48,0,-inf,93.0,,blood_o2_measurement,Low
+4,48,1,93.0,inf,,blood_o2_measurement,High
+5,49,0,-inf,6.65,,blood_sugar_measurement,Low
+6,49,1,6.65,inf,,blood_sugar_measurement,High
+7,50,0,-inf,73.75,,pulse_measurement,Low
+8,50,1,73.75,inf,,pulse_measurement,High
+9,51,0,-inf,17.0,,respiration_measurement,Low
+10,51,1,17.0,inf,,respiration_measurement,High
+11,52,0,-inf,36.55,,temperature_measurement,Low
+12,52,1,36.55,inf,,temperature_measurement,High
+13,53,0,-inf,1.6,,Hieght,Low
+14,53,1,1.6,inf,,Hieght,High
+15,54,0,-inf,1.0,,medical_routin_regular_observed,Low
+16,54,1,1.0,inf,,medical_routin_regular_observed,High
+17,55,0,-inf,1.0,,medical_routin_special_observed,Low
+18,55,1,1.0,inf,,medical_routin_special_observed,High
+19,56,0,-inf,3.0,,medical_routin_regular_intervene,Low
+20,56,1,3.0,inf,,medical_routin_regular_intervene,High
+21,57,0,-inf,1.0,,medical_routin_uncertain_intervene,Low
+22,57,1,1.0,inf,,medical_routin_uncertain_intervene,High
+23,58,0,-inf,1.0,,medical_routin_special_intervene,Low
+24,58,1,1.0,inf,,medical_routin_special_intervene,High
+25,59,0,-inf,1.0,,medical_uncertain_special,Low
+26,59,1,1.0,inf,,medical_uncertain_special,High
+27,60,0,-inf,1.0,,medical_urgent_special_observed,Low
+28,60,1,1.0,inf,,medical_urgent_special_observed,High
+29,61,0,-inf,1.0,,medical_urgent_special_intervene,Low
+30,61,1,1.0,inf,,medical_urgent_special_intervene,High
+31,62,0,-inf,7.0,,Fluid,Low
+32,62,1,7.0,inf,,Fluid,High
+33,63,0,-inf,3.0,,Food,Low
+34,63,1,3.0,inf,,Food,High
+35,64,0,-inf,1.0,, Nutrition watch,Low
+36,64,1,1.0,inf,, Nutrition watch,High
+37,65,0,-inf,1.0,,Fluid Watch,Low
+38,65,1,1.0,inf,,Fluid Watch,High
+39,66,0,-inf,2.0,,Toilet,Low
+40,66,1,2.0,inf,,Toilet,High
+41,67,0,-inf,1.0,,Emotions,Low
+42,67,1,1.0,inf,,Emotions,High
+43,68,0,-inf,2.0,,Positive Communication,Low
+44,68,1,2.0,inf,,Positive Communication,High
+45,69,0,-inf,1.0,,Entertainer,Low
+46,69,1,1.0,inf,,Entertainer,High
+47,70,0,-inf,1.0,,Smooking,Low
+48,70,1,1.0,inf,,Smooking,High
+49,71,0,-inf,1.0,,Exrcise,Low
+50,71,1,1.0,inf,,Exrcise,High
+51,72,0,-inf,5.333333333333333,,Appetite,Low
+52,72,1,5.333333333333333,inf,,Appetite,High
+53,73,0,-inf,204.0,,Fluid_Amount,Low
+54,73,1,204.0,inf,,Fluid_Amount,High
+55,75,0,-inf,2.0,,Illness,Low
+56,75,1,2.0,inf,,Illness,High
+57,76,0,-inf,3.0,,MobilityAssistance,Low
+58,76,1,3.0,inf,,MobilityAssistance,High
+59,77,0,-inf,2.0,,Diet,Low
+60,77,1,2.0,inf,,Diet,High

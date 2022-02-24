@@ -1,0 +1,90 @@
+StateID,TemporalPropertyID,BinID,BinLow,BinHigh,BinLowScore,TemporalPropertyName,BinLabel
+1,47,0,-inf,56.41666666666666,,weight_measurement,Low
+2,47,1,56.41666666666666,79.48333333333332,,weight_measurement,Medium
+3,47,2,79.48333333333332,inf,,weight_measurement,High
+4,48,0,-inf,86.66666666666667,,blood_o2_measurement,Low
+5,48,1,86.66666666666667,93.33333333333331,,blood_o2_measurement,Medium
+6,48,2,93.33333333333331,inf,,blood_o2_measurement,High
+7,49,0,-inf,8.3,,blood_sugar_measurement,Low
+8,49,1,8.3,12.2,,blood_sugar_measurement,Medium
+9,49,2,12.2,inf,,blood_sugar_measurement,High
+10,50,0,-inf,64.0,,pulse_measurement,Low
+11,50,1,64.0,81.0,,pulse_measurement,Medium
+12,50,2,81.0,inf,,pulse_measurement,High
+13,51,0,-inf,15.333333333333334,,respiration_measurement,Low
+14,51,1,15.333333333333334,18.666666666666668,,respiration_measurement,Medium
+15,51,2,18.666666666666668,inf,,respiration_measurement,High
+16,52,0,-inf,13.111111111111112,,temperature_measurement,Low
+17,52,1,13.111111111111112,26.222222222222225,,temperature_measurement,Medium
+18,52,2,26.222222222222225,inf,,temperature_measurement,High
+19,53,0,-inf,1.574466666666667,,Hieght,Low
+20,53,1,1.574466666666667,1.6889333333333332,,Hieght,Medium
+21,53,2,1.6889333333333332,inf,,Hieght,High
+22,54,0,-inf,2.333333333333333,,medical_routin_regular_observed,Low
+23,54,1,2.333333333333333,3.6666666666666665,,medical_routin_regular_observed,Medium
+24,54,2,3.6666666666666665,inf,,medical_routin_regular_observed,High
+25,55,0,-inf,1.3333333333333333,,medical_routin_special_observed,Low
+26,55,1,1.3333333333333333,1.6666666666666663,,medical_routin_special_observed,Medium
+27,55,2,1.6666666666666663,inf,,medical_routin_special_observed,High
+28,56,0,-inf,3.0,,medical_routin_regular_intervene,Low
+29,56,1,3.0,5.0,,medical_routin_regular_intervene,Medium
+30,56,2,5.0,inf,,medical_routin_regular_intervene,High
+31,57,0,-inf,1.0,,medical_routin_uncertain_intervene,Low
+32,57,1,1.0,inf,,medical_routin_uncertain_intervene,Medium
+33,58,0,-inf,1.6666666666666663,,medical_routin_special_intervene,Low
+34,58,1,1.6666666666666663,2.333333333333333,,medical_routin_special_intervene,Medium
+35,58,2,2.333333333333333,inf,,medical_routin_special_intervene,High
+36,59,0,-inf,1.6666666666666663,,medical_uncertain_special,Low
+37,59,1,1.6666666666666663,2.333333333333333,,medical_uncertain_special,Medium
+38,59,2,2.333333333333333,inf,,medical_uncertain_special,High
+39,60,0,-inf,1.6666666666666663,,medical_urgent_special_observed,Low
+40,60,1,1.6666666666666663,2.333333333333333,,medical_urgent_special_observed,Medium
+41,60,2,2.333333333333333,inf,,medical_urgent_special_observed,High
+42,61,0,-inf,1.6666666666666663,,medical_urgent_special_intervene,Low
+43,61,1,1.6666666666666663,2.333333333333333,,medical_urgent_special_intervene,Medium
+44,61,2,2.333333333333333,inf,,medical_urgent_special_intervene,High
+45,62,0,-inf,5.333333333333333,,Fluid,Low
+46,62,1,5.333333333333333,9.666666666666666,,Fluid,Medium
+47,62,2,9.666666666666666,inf,,Fluid,High
+48,63,0,-inf,3.0,,Food,Low
+49,63,1,3.0,5.0,,Food,Medium
+50,63,2,5.0,inf,,Food,High
+51,64,0,-inf,2.666666666666667,, Nutrition watch,Low
+52,64,1,2.666666666666667,4.333333333333334,, Nutrition watch,Medium
+53,64,2,4.333333333333334,inf,, Nutrition watch,High
+54,65,0,-inf,4.0,,Fluid Watch,Low
+55,65,1,4.0,7.0,,Fluid Watch,Medium
+56,65,2,7.0,inf,,Fluid Watch,High
+57,66,0,-inf,3.6666666666666665,,Toilet,Low
+58,66,1,3.6666666666666665,6.333333333333333,,Toilet,Medium
+59,66,2,6.333333333333333,inf,,Toilet,High
+60,67,0,-inf,4.666666666666666,,Emotions,Low
+61,67,1,4.666666666666666,8.333333333333332,,Emotions,Medium
+62,67,2,8.333333333333332,inf,,Emotions,High
+63,68,0,-inf,2.666666666666667,,Positive Communication,Low
+64,68,1,2.666666666666667,4.333333333333334,,Positive Communication,Medium
+65,68,2,4.333333333333334,inf,,Positive Communication,High
+66,69,0,-inf,2.0,,Entertainer,Low
+67,69,1,2.0,3.0,,Entertainer,Medium
+68,69,2,3.0,inf,,Entertainer,High
+69,70,0,-inf,1.6666666666666663,,Smooking,Low
+70,70,1,1.6666666666666663,2.333333333333333,,Smooking,Medium
+71,70,2,2.333333333333333,inf,,Smooking,High
+72,71,0,-inf,2.0,,Exrcise,Low
+73,71,1,2.0,3.0,,Exrcise,Medium
+74,71,2,3.0,inf,,Exrcise,High
+75,72,0,-inf,4.333333333333333,,Appetite,Low
+76,72,1,4.333333333333333,5.666666666666666,,Appetite,Medium
+77,72,2,5.666666666666666,inf,,Appetite,High
+78,73,0,-inf,154.0,,Fluid_Amount,Low
+79,73,1,154.0,308.0,,Fluid_Amount,Medium
+80,73,2,308.0,inf,,Fluid_Amount,High
+81,75,0,-inf,1.6666666666666663,,Illness,Low
+82,75,1,1.6666666666666663,2.333333333333333,,Illness,Medium
+83,75,2,2.333333333333333,inf,,Illness,High
+84,76,0,-inf,3.242424242424242,,MobilityAssistance,Low
+85,76,1,3.242424242424242,5.484848484848484,,MobilityAssistance,Medium
+86,76,2,5.484848484848484,inf,,MobilityAssistance,High
+87,77,0,-inf,1.9583333333333333,,Diet,Low
+88,77,1,1.9583333333333333,2.4166666666666665,,Diet,Medium
+89,77,2,2.4166666666666665,inf,,Diet,High

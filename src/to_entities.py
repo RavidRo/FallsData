@@ -15,14 +15,14 @@ def __create_frequency(raw_data):
     frequency = raw_data.apply(
         lambda row: pd.Series(
             [row[2] / (row[0] - row[1])],
-            index=["Frequency"],
+            index=["Monitoring_Frequency"],
         ),
         axis=1,
     )
 
     # Splitting the frequencies to categories
-    std = frequency["Frequency"].std()
-    mean = frequency["Frequency"].mean()
+    std = frequency["Monitoring_Frequency"].std()
+    mean = frequency["Monitoring_Frequency"].mean()
 
     verLow = mean - std * 2
     low = mean - std
@@ -31,14 +31,18 @@ def __create_frequency(raw_data):
 
     bins = [0, verLow, low, heigh, veryHeigh, 100]
     labels = ["Very_Low", "Low", "Average", "High", "Very_High"]
-    frequency["Frequency"] = pd.cut(frequency["Frequency"], bins, labels=labels)
+    frequency["Monitoring_Frequency"] = pd.cut(
+        frequency["Monitoring_Frequency"], bins, labels=labels
+    )
 
     return frequency
 
 
 def __reformat_entities(entities):
     entities = entities[["entity_id", "Gender", "AgeRange", "Score"]]
-    entities = entities.rename(columns={"entity_id": "id", "AgeRange": "Age_Range"})
+    entities = entities.rename(
+        columns={"entity_id": "id", "AgeRange": "Age_Range", "Score": "Home_Care_Rating"}
+    )
     entities = entities.drop_duplicates()
     return entities
 
@@ -65,13 +69,15 @@ def create_entities(raw_data_imported, entities_imported, selected_falls):
     )
 
     # Puts the data in the right order and sets numerical columns to integers
-    entities_only_selected["Score"] = entities_only_selected.apply(
-        lambda row: int(row["Score"]), axis=1
+    entities_only_selected["Home_Care_Rating"] = entities_only_selected.apply(
+        lambda row: int(row["Home_Care_Rating"]), axis=1
     )
     entities_only_selected["Age_Range"] = entities_only_selected.apply(
-        lambda row: int(row["Age_Range"]), axis=1
+        lambda row: f"{int(row['Age_Range'])}-{int(row['Age_Range']) + 5}", axis=1
     )
     entities_only_selected["id"] = entities_only_selected.apply(lambda row: int(row["id"]), axis=1)
-    entities = entities_only_selected[["id", "Gender", "Age_Range", "Score", "Frequency"]]
+    entities = entities_only_selected[
+        ["id", "Gender", "Age_Range", "Home_Care_Rating", "Monitoring_Frequency"]
+    ]
 
     return entities
