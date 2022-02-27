@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 
-from src.two_classes_2.to_entities import create_entities
+from src.two_classes_2.to_entities import create_entities, create_entities_most_data
 from src.two_classes_2.to_raw_data import create_raw_data
 from src.two_classes_2.to_vmap import create_vmap, filter_vmap
 
@@ -14,7 +14,7 @@ data_directory = "data"
 
 def import_data():
     path = os.path.join(data_directory, two_classes_directory)
-    entities_imported = pd.read_csv(path + "/entitiy_info_windows.csv")
+    entities_imported = pd.read_csv(path + "/entities_info_windows.csv")
     raw_data_imported = pd.read_csv(path + "/hogo_data_windows.csv")
     properties = pd.read_csv(path + "/fall_properties.csv")
 
@@ -37,7 +37,7 @@ if __name__ == "__main__":
 
     classification_rows = raw_data[raw_data["TemporalPropertyID"] == -1]
 
-    new_entities = create_entities(entities, target_entities, balance_classes)
+    new_entities = create_entities_most_data(entities, raw_data, target_entities, balance_classes)
     print("Created entities")
 
     new_raw_data = create_raw_data(raw_data, new_entities, vmap)
