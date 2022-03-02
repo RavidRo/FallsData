@@ -1,11 +1,11 @@
 import os
 import pandas as pd
 
-from src.two_classes_2.to_entities import create_entities, create_entities_most_data
+from src.two_classes_2.to_entities import create_entities, create_entities_most_data, alisa_script
 from src.two_classes_2.to_raw_data import create_raw_data
 from src.two_classes_2.to_vmap import create_vmap, filter_vmap
 
-target_entities = 10000
+target_entities = 100
 balance_classes = True
 dataset_directory = "Falls"
 two_classes_directory = "time_window_data"
@@ -38,6 +38,7 @@ if __name__ == "__main__":
     classification_rows = raw_data[raw_data["TemporalPropertyID"] == -1]
 
     new_entities = create_entities_most_data(entities, raw_data, target_entities, balance_classes)
+    new_entities = alisa_script(entities, target_entities, raw_data)
     print("Created entities")
 
     new_raw_data = create_raw_data(raw_data, new_entities, vmap)

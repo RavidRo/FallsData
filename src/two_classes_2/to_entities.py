@@ -27,13 +27,43 @@ def create_entities_most_data(entities_imported, raw_data, target, balance_class
 
     # raw_data = pd.concat([raw_data.head(100), raw_data.tail(100)])
     fell_raw, not_fell_raw = split_data_to_classes(entities, raw_data)
-    fell_informative_entities = get_most_informative_entities(fell_raw, 1000)
-    not_fell_informative_entities = get_most_informative_entities(not_fell_raw, 1000)
+    fell_informative_entities = get_most_informative_entities(fell_raw, int(target/2))
+    not_fell_informative_entities = get_most_informative_entities(not_fell_raw, int(target/2))
     informative_entities = fell_informative_entities + not_fell_informative_entities
     entities = entities[entities["id"].isin(informative_entities)]
     int_columns = ["AgeRange", "Score"]
     entities[int_columns] = entities[int_columns].astype(int)
     return entities
+
+def alisa_script(entities_imported, target, raw_data):
+    entities = entities_imported.rename(columns={"EntityID": "id"})
+    entities = entities[["id", "Gender", "AgeRange", "Score", "Class"]]
+    entities = entities.dropna().drop_duplicates()
+
+    fell, not_fell = split_data_to_classes(entities, raw_data)
+    h = fell
+    e = entities_imported
+    top = h.groupby('EntityID').count().sort_values(by=['TimeStamp'], ascending=False).reset_index()[
+        ['EntityID', 'TimeStamp']]
+    top = top.merge(e, on='EntityID', how='left')
+    top_fell = top.groupby(by=['Class']).head(target).reset_index()['EntityID'].tolist()
+    # h_fell = h[h['EntityID'].isin(top)]
+    # e_fell = e[e['EntityID'].isin(top)]
+
+    h = not_fell
+    e = entities_imported
+    top = h.groupby('EntityID').count().sort_values(by=['TimeStamp'], ascending=False).reset_index()[
+        ['EntityID', 'TimeStamp']]
+    top = top.merge(e, on='EntityID', how='left')
+    top_not_fell = top.groupby(by=['Class']).head(target).reset_index()['EntityID'].tolist()
+    # h_not_fell = h[h['EntityID'].isin(top)]
+    # e_not_fell = e[e['EntityID'].isin(top)]
+
+    entities = entities[entities["id"].isin(top_fell + top_not_fell)]
+    int_columns = ["AgeRange", "Score"]
+    entities[int_columns] = entities[int_columns].astype(int)
+    return entities
+
 
 
 def create_entities(entities_imported, target, balance_classes):
