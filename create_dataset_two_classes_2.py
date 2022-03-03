@@ -5,7 +5,7 @@ from src.two_classes_2.to_entities import create_entities, create_entities_most_
 from src.two_classes_2.to_raw_data import create_raw_data
 from src.two_classes_2.to_vmap import create_vmap, filter_vmap
 
-target_entities = 100
+target_entities = 200
 balance_classes = True
 dataset_directory = "Falls"
 two_classes_directory = "time_window_data"
@@ -17,8 +17,9 @@ def import_data():
     entities_imported = pd.read_csv(path + "/entities_info_windows.csv")
     raw_data_imported = pd.read_csv(path + "/hogo_data_windows.csv")
     properties = pd.read_csv(path + "/fall_properties.csv")
+    risk_map = pd.read_csv(path + "/risk_assesment_map.csv")
 
-    return raw_data_imported, properties, entities_imported
+    return raw_data_imported, properties, entities_imported, risk_map
 
 
 def export_data(raw_data, vmap, entities):
@@ -30,15 +31,14 @@ def export_data(raw_data, vmap, entities):
 if __name__ == "__main__":
     print("Creating Falls dataset ------------")
 
-    raw_data, properties, entities = import_data()
+    raw_data, properties, entities, risk_map = import_data()
 
-    vmap = create_vmap(properties)
+    vmap = create_vmap(properties, risk_map)
     print("Created vmap")
 
     classification_rows = raw_data[raw_data["TemporalPropertyID"] == -1]
 
     new_entities = create_entities_most_data(entities, raw_data, target_entities, balance_classes)
-    new_entities = alisa_script(entities, target_entities, raw_data)
     print("Created entities")
 
     new_raw_data = create_raw_data(raw_data, new_entities, vmap)
