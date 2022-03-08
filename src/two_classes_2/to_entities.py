@@ -13,53 +13,37 @@ def split_data_to_classes(entities, raw_data):
     return fell_raw_data, not_fell_raw_data
 
 
-def get_most_informative_entities(raw_data, count_entities):
+def get_most_informative_entities(raw_data, count_entities, entities_info):
+    # returning windows with most data rows by different residents
     raw_data_grouped_by = raw_data['EntityID'].value_counts(dropna=True, sort=True).reset_index()
     raw_data_grouped_by.columns = ['EntityID', 'counts']
-    most_data_entities = raw_data_grouped_by.nlargest(count_entities, 'counts')
-    entities = most_data_entities['EntityID'].to_list()
-    return entities
+    windows_entities_mapping = {}
+    for _, row in entities_info.iterrows():
+        windows_entities_mapping[row['id']] = row['ConnectionID']
+    entities_chosen = []
+    windodws_chosen = []
+    for _, row in raw_data_grouped_by.iterrows():
+        if len(windodws_chosen) < count_entities:
+            window_id = row['EntityID']
+            entity_id = windows_entities_mapping[window_id]
+            if entity_id not in entities_chosen:
+                entities_chosen.append(entity_id)
+                windodws_chosen.append(window_id)
+        else:
+            break
+    return windodws_chosen
+
 
 def create_entities_most_data(entities_imported, raw_data, target, balance_classes):
-    entities = entities_imported.rename(columns={"EntityID": "id"})
-    entities = entities[["id", "Gender", "AgeRange", "Score", "Class"]]
+    entities = entities_imported.rename(columns={"EntityID": "id", "AgeRange_x": "AgeRange", "Score_x": "Score", "Gender_x": "Gender"})
+    entities = entities[["id", "Gender", "AgeRange", "Score", "Class", "ConnectionID"]]
     entities = entities.dropna().drop_duplicates()
-
-    # raw_data = pd.concat([raw_data.head(100), raw_data.tail(100)])
     fell_raw, not_fell_raw = split_data_to_classes(entities, raw_data)
-    fell_informative_entities = get_most_informative_entities(fell_raw, int(target/2))
-    not_fell_informative_entities = get_most_informative_entities(not_fell_raw, int(target/2))
+    fell_informative_entities = get_most_informative_entities(fell_raw, int(target/2), entities)
+    not_fell_informative_entities = get_most_informative_entities(not_fell_raw, int(target/2), entities)
     informative_entities = fell_informative_entities + not_fell_informative_entities
     entities = entities[entities["id"].isin(informative_entities)]
-    int_columns = ["AgeRange", "Score"]
-    entities[int_columns] = entities[int_columns].astype(int)
-    return entities
-
-def alisa_script(entities_imported, target, raw_data):
-    entities = entities_imported.rename(columns={"EntityID": "id"})
-    entities = entities[["id", "Gender", "AgeRange", "Score", "Class"]]
-    entities = entities.dropna().drop_duplicates()
-
-    fell, not_fell = split_data_to_classes(entities, raw_data)
-    h = fell
-    e = entities_imported
-    top = h.groupby('EntityID').count().sort_values(by=['TimeStamp'], ascending=False).reset_index()[
-        ['EntityID', 'TimeStamp']]
-    top = top.merge(e, on='EntityID', how='left')
-    top_fell = top.groupby(by=['Class']).head(target).reset_index()['EntityID'].tolist()
-    # h_fell = h[h['EntityID'].isin(top)]
-    # e_fell = e[e['EntityID'].isin(top)]
-
-    h = not_fell
-    e = entities_imported
-    top = h.groupby('EntityID').count().sort_values(by=['TimeStamp'], ascending=False).reset_index()[
-        ['EntityID', 'TimeStamp']]
-    top = top.merge(e, on='EntityID', how='left')
-    top_not_fell = top.groupby(by=['Class']).head(target).reset_index()['EntityID'].tolist()
-    # h_not_fell = h[h['EntityID'].isin(top)]
-    # e_not_fell = e[e['EntityID'].isin(top)]
-
-    entities = entities[entities["id"].isin(top_fell + top_not_fell)]
+    entities = entities.drop(labels='ConnectionID', axis=1)
     int_columns = ["AgeRange", "Score"]
     entities[int_columns] = entities[int_columns].astype(int)
     return entities
