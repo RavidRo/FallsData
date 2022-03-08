@@ -5,7 +5,7 @@ from src.two_classes_2.to_entities import create_entities, create_entities_most_
 from src.two_classes_2.to_raw_data import create_raw_data
 from src.two_classes_2.to_vmap import create_vmap, filter_vmap
 
-target_entities = 300
+target_entities = 10000
 balance_classes = True
 dataset_directory = "Falls"
 two_classes_directory = "time_window_data"
