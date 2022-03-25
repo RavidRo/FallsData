@@ -4,6 +4,7 @@ from src.balance_entities import balance_entities
 from src.to_entities import create_entities
 from src.to_raw_data import create_raw_data
 from src.to_vmap import create_vmap
+from src.informative_entities import get_informative_entities
 
 falls = {
     "ids": [78, 79, 80, 81, 82],
@@ -16,9 +17,9 @@ falls = {
     ],
 }
 group_falls = True
-balance = True
+balance = False
 selected_falls = [80, 81]
-target_entities = 100
+target_entities = 50
 dataset_directory = "Falls"
 data_directory = "data"
 
@@ -47,6 +48,7 @@ if __name__ == "__main__":
     new_entities = create_entities(raw_data, entities, selected_falls)
     print("Created entities")
     balanced_entities = balance_entities(new_entities, target_entities, balance)
+    # informative_entities = get_informative_entities(entities, raw_data, target_entities)
 
     new_raw_data = create_raw_data(
         balanced_entities, raw_data, selected_falls, falls["ids"], group_falls

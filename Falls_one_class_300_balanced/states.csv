@@ -1,0 +1,98 @@
+StateID,TemporalPropertyID,BinID,BinLow,BinHigh,Method,TemporalPropertyName,BinLabel
+1,1,0,-90,-10,gradient,missing,Decresing
+2,1,1,-10,10,gradient,missing,Stable
+3,1,2,10,90,gradient,missing,Increasing
+4,47,0,-90,-10,gradient,weight_measurement,Decresing
+5,47,1,-10,10,gradient,weight_measurement,Stable
+6,47,2,10,90,gradient,weight_measurement,Increasing
+7,48,0,-90,-10,gradient,blood_o2_measurement,Decresing
+8,48,1,-10,10,gradient,blood_o2_measurement,Stable
+9,48,2,10,90,gradient,blood_o2_measurement,Increasing
+10,49,0,-90,-10,gradient,blood_sugar_measurement,Decresing
+11,49,1,-10,10,gradient,blood_sugar_measurement,Stable
+12,49,2,10,90,gradient,blood_sugar_measurement,Increasing
+13,50,0,-90,-10,gradient,pulse_measurement,Decresing
+14,50,1,-10,10,gradient,pulse_measurement,Stable
+15,50,2,10,90,gradient,pulse_measurement,Increasing
+16,51,0,-90,-10,gradient,respiration_measurement,Decresing
+17,51,1,-10,10,gradient,respiration_measurement,Stable
+18,51,2,10,90,gradient,respiration_measurement,Increasing
+19,52,0,-90,-10,gradient,temperature_measurement,Decresing
+20,52,1,-10,10,gradient,temperature_measurement,Stable
+21,52,2,10,90,gradient,temperature_measurement,Increasing
+22,53,0,-90,-10,gradient,Hieght,Decresing
+23,53,1,-10,10,gradient,Hieght,Stable
+24,53,2,10,90,gradient,Hieght,Increasing
+25,54,0,-90,-10,gradient,medical_routin_regular_observed,Decresing
+26,54,1,-10,10,gradient,medical_routin_regular_observed,Stable
+27,54,2,10,90,gradient,medical_routin_regular_observed,Increasing
+28,55,0,-90,-10,gradient,medical_routin_special_observed,Decresing
+29,55,1,-10,10,gradient,medical_routin_special_observed,Stable
+30,55,2,10,90,gradient,medical_routin_special_observed,Increasing
+31,56,0,-90,-10,gradient,medical_routin_regular_intervene,Decresing
+32,56,1,-10,10,gradient,medical_routin_regular_intervene,Stable
+33,56,2,10,90,gradient,medical_routin_regular_intervene,Increasing
+34,57,0,-90,-10,gradient,medical_routin_uncertain_intervene,Decresing
+35,57,1,-10,10,gradient,medical_routin_uncertain_intervene,Stable
+36,57,2,10,90,gradient,medical_routin_uncertain_intervene,Increasing
+37,58,0,-90,-10,gradient,medical_routin_special_intervene,Decresing
+38,58,1,-10,10,gradient,medical_routin_special_intervene,Stable
+39,58,2,10,90,gradient,medical_routin_special_intervene,Increasing
+40,59,0,-90,-10,gradient,medical_uncertain_special,Decresing
+41,59,1,-10,10,gradient,medical_uncertain_special,Stable
+42,59,2,10,90,gradient,medical_uncertain_special,Increasing
+43,60,0,-90,-10,gradient,medical_urgent_special_observed,Decresing
+44,60,1,-10,10,gradient,medical_urgent_special_observed,Stable
+45,60,2,10,90,gradient,medical_urgent_special_observed,Increasing
+46,61,0,-90,-10,gradient,medical_urgent_special_intervene,Decresing
+47,61,1,-10,10,gradient,medical_urgent_special_intervene,Stable
+48,61,2,10,90,gradient,medical_urgent_special_intervene,Increasing
+49,62,0,-90,-10,gradient,Fluid,Decresing
+50,62,1,-10,10,gradient,Fluid,Stable
+51,62,2,10,90,gradient,Fluid,Increasing
+52,63,0,-90,-10,gradient,Food,Decresing
+53,63,1,-10,10,gradient,Food,Stable
+54,63,2,10,90,gradient,Food,Increasing
+55,64,0,-90,-10,gradient, Nutrition watch,Decresing
+56,64,1,-10,10,gradient, Nutrition watch,Stable
+57,64,2,10,90,gradient, Nutrition watch,Increasing
+58,65,0,-90,-10,gradient,Fluid Watch,Decresing
+59,65,1,-10,10,gradient,Fluid Watch,Stable
+60,65,2,10,90,gradient,Fluid Watch,Increasing
+61,66,0,-90,-10,gradient,Toilet,Decresing
+62,66,1,-10,10,gradient,Toilet,Stable
+63,66,2,10,90,gradient,Toilet,Increasing
+64,67,0,-90,-10,gradient,Emotions,Decresing
+65,67,1,-10,10,gradient,Emotions,Stable
+66,67,2,10,90,gradient,Emotions,Increasing
+67,68,0,-90,-10,gradient,Positive Communication,Decresing
+68,68,1,-10,10,gradient,Positive Communication,Stable
+69,68,2,10,90,gradient,Positive Communication,Increasing
+70,69,0,-90,-10,gradient,Entertainer,Decresing
+71,69,1,-10,10,gradient,Entertainer,Stable
+72,69,2,10,90,gradient,Entertainer,Increasing
+73,70,0,-90,-10,gradient,Smooking,Decresing
+74,70,1,-10,10,gradient,Smooking,Stable
+75,70,2,10,90,gradient,Smooking,Increasing
+76,71,0,-90,-10,gradient,Exrcise,Decresing
+77,71,1,-10,10,gradient,Exrcise,Stable
+78,71,2,10,90,gradient,Exrcise,Increasing
+79,72,0,-90,-10,gradient,Appetite,Decresing
+80,72,1,-10,10,gradient,Appetite,Stable
+81,72,2,10,90,gradient,Appetite,Increasing
+82,73,0,-90,-10,gradient,Fluid_Amount,Decresing
+83,73,1,-10,10,gradient,Fluid_Amount,Stable
+84,73,2,10,90,gradient,Fluid_Amount,Increasing
+85,74,0,-90,-10,gradient,Happiness,Decresing
+86,74,1,-10,10,gradient,Happiness,Stable
+87,74,2,10,90,gradient,Happiness,Increasing
+88,75,0,-90,-10,gradient,Illness,Decresing
+89,75,1,-10,10,gradient,Illness,Stable
+90,75,2,10,90,gradient,Illness,Increasing
+91,76,0,-90,-10,gradient,MobilityAssistance,Decresing
+92,76,1,-10,10,gradient,MobilityAssistance,Stable
+93,76,2,10,90,gradient,MobilityAssistance,Increasing
+94,77,0,-90,-10,gradient,Diet,Decresing
+95,77,1,-10,10,gradient,Diet,Stable
+96,77,2,10,90,gradient,Diet,Increasing
+97,78,0,-1,1,???,Fall,Event

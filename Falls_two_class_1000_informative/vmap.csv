@@ -1,0 +1,78 @@
+Variable ID,Variable Name,Description
+1,Abbey Pain Scale count,Abbey Pain Scale count
+2,Barthel Index count,Barthel Index count
+3,Bed Rails count,Bed Rails count
+4,Continence count,Continence count
+5,Cornell Scale count,Cornell Scale count
+6,Falls count,Falls count
+7,Moving and Handling count,Moving and Handling count
+8,Must Tool count,Must Tool count
+9,Nutritional count,Nutritional count
+10,Peep count,Peep count
+11,Waterlow count,Waterlow count
+12,Crichton Rating count,Crichton Rating count
+13,Dependency count,Dependency count
+14,Mental Capacity count,Mental Capacity count
+15,Braden Scale count,Braden Scale count
+16,Generic count,Generic count
+17,Self Medication count,Self Medication count
+18,Behaviour count,Behaviour count
+19,Quick Care plan count,Quick Care plan count
+20,Wound Care count,Wound Care count
+21,Eating Drinking count,Eating Drinking count
+22,Pre Admission count,Pre Admission count
+23,Oral Health count,Oral Health count
+24,Oral Health count,Oral Health count
+25,Eton Constipation count,Eton Constipation count
+26,Advanced Care Plan count,Advanced Care Plan count
+27,Interests and Activities count,Interests and Activities count
+28,Abbey Pain Scale mean,Abbey Pain Scale mean
+29,Barthel Index mean,Barthel Index mean
+30,Bed Rails mean,Bed Rails mean
+31,Cornell Scale mean,Cornell Scale mean
+32,Falls mean,Falls mean
+33,Moving and Handling mean,Moving and Handling mean
+34,Must Tool mean,Must Tool mean
+35,Nutritional mean,Nutritional mean
+36,Peep mean,Peep mean
+37,Waterlow mean,Waterlow mean
+38,Crichton Rating mean,Crichton Rating mean
+39,Dependency mean,Dependency mean
+40,Mental Capacity mean,Mental Capacity mean
+41,Braden Scale mean,Braden Scale mean
+42,Generic mean,Generic mean
+43,Behaviour mean,Behaviour mean
+44,Eating Drinking mean,Eating Drinking mean
+45,Oral Health mean,Oral Health mean
+46,Eton Constipation mean,Eton Constipation mean
+47,weight_measurement,weight_measurement
+48,blood_o2_measurement,blood_o2_measurement
+49,blood_sugar_measurement,blood_sugar_measurement
+50,pulse_measurement,pulse_measurement
+51,respiration_measurement,respiration_measurement
+52,temperature_measurement,temperature_measurement
+53,Hieght,Hieght
+54,medical_routin_regular_observed,medical_routin_regular_observed
+55,medical_routin_special_observed,medical_routin_special_observed
+56,medical_routin_regular_intervene,medical_routin_regular_intervene
+57,medical_routin_uncertain_intervene,medical_routin_uncertain_intervene
+58,medical_routin_special_intervene,medical_routin_special_intervene
+59,medical_uncertain_special,medical_uncertain_special
+60,medical_urgent_special_observed,medical_urgent_special_observed
+61,medical_urgent_special_intervene,medical_urgent_special_intervene
+62,Fluid,Fluid
+63,Food,Food
+64, Nutrition watch, Nutrition watch
+65,Fluid Watch,Fluid Watch
+66,Toilet,Toilet
+67,Emotions,Emotions
+68,Positive Communication,Positive Communication
+69,Entertainer,Entertainer
+70,Smooking,Smooking
+71,Exrcise,Exrcise
+72,Appetite,Appetite
+73,Fluid_Amount,Fluid_Amount
+75,Illness,Illness
+76,MobilityAssistance,MobilityAssistance
+77,Diet,Diet
+-1,fell,fell

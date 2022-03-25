@@ -1,7 +1,7 @@
 import pandas as pd
 
 falls_properties_ids = [78]
-unused_falls_properties_ids = [78, 79, 82]
+unused_falls_properties_ids = [79, 82]
 
 output_directory = "Falls_one_class_100_balanced"
 input_directory = "data"
